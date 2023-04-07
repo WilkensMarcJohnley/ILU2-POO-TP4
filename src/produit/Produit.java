@@ -1,6 +1,8 @@
 package produit;
 
-public abstract class Produit {
+import villagegaulois.IProduit;
+
+public abstract class Produit implements IProduit {
 	private String nom;
 	private Unite unite;
 	
@@ -9,10 +11,12 @@ public abstract class Produit {
 		this.unite = unite;
 	}
 	
+	@Override
 	public String getNom() {
 		return nom;
 	}
 	
+	@Override
 	public abstract String descriptionProduit();
 
 

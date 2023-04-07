@@ -1,7 +1,7 @@
 package villagegauloisold;
 
 import personnages.Gaulois;
-import produit.Produit;
+import villagegaulois.IProduit;
 
 public interface IEtal {
 
@@ -11,11 +11,11 @@ public interface IEtal {
 
 	int getQuantite();
 
-	Produit getProduit();
+	IProduit getProduit();
 
-	void occuperEtal(Gaulois vendeur, Produit produit, int quantite);
+	void occuperEtal(Gaulois vendeur, IProduit produit, int quantite);
 
-	boolean contientProduit(Produit produit);
+	boolean contientProduit(IProduit produit);
 
 	int acheterProduit(int quantiteAcheter);
 
